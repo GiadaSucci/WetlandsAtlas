@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wetlands site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  
+    
+  <div class="col-2 padding  header-wrapper">
+    <p class="m-0 " id="titoloprogetto">Wetlands Atlas</p>
+  </div>
+
+
+<div class="container-fluid">
+   
+    <div class="row">
+      
+      
+        <!-- Lista di oasi per selezione -->
+        <div class="col-md-2" id="sidebar-oasi">
+          <div class="spazioheader"></div>
+          
+          <div class="row lista-oasi padding">
+              
+             <!-- CAVE DI NOALE-->
+             <div class="altezzaoasi padding" >
+              <a href="noale_specie.html" onclick=" changeOasi('gaggionord')" class="city-link" data-oasi="noale">
+                <div class="city-img-wrapper  padding">
+                  <img src="img/noalebw.png"  class="img-fluid">
+                  <p class="oasi-no-click">Cave di Noale</p>
+                  <div class="overlay"></div>
+                </div> 
+              </a>
+            </div>
+
+            <!-- Oasi Lycaena -->
+            <div class="altezzaoasi padding">
+              <a href="lycaena_specie.html" onclick="event.preventDefault(); changeOasi('roma')" class="city-link" data-oasi="lycaena">
+                <div class="city-img-wrapper ">
+                  <img src="img/salzanocolor.png" class="img-fluid">
+                  <p class="oasi-click">Oasi Lycaena</p>
+                </div>
+              </a>
+            </div>
+
+
+            <!-- Cave di Gaggio Nord -->
+            <div class="altezzaoasi padding">
+              <a href="gaggio_specie.html" onclick=" changeOasi('napoli')" class="city-link" data-oasi="gaggio">
+                <div class="city-img-wrapper">
+                  <img src="img/gaggiobw.png" class="img-fluid">
+                  <p class="oasi-no-click ">Cave di Gaggio Nord</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Palude di Onara -->
+            <div class="altezzaoasi padding">
+              <a href="onara_specie.html" onclick="changeOasi('torino')" class="city-link" data-oasi="onara">
+                <div class="city-img-wrapper">
+                  <img src="img/onarabw.png"  class="img-fluid">
+                  <p class="oasi-no-click ">Palude di Onara</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10 main-content-scrollable">
+          <div class="row">
+            <div class="col-12 col-md-8 titolo-synth">
+              <p>OASI LYCAENA</p>
+            </div>
+            <div class="col-12 col-md-4  d-flex menu-links">
+              <div class="d-flex gap-4">
+                <a href="lycaena_mappa.html" class="menu-item "><span class="menu-underline"></span>Esplora la mappa</a>
+                <a href="lycaena_specie.html" class="menu-item active"><span class="menu-underline"></span>Esplora le specie</a>
+                <a href="lycaena_visita.html" class="menu-item"><span class="menu-underline"></span>Visita l'oasi</a>
+              </div>
+            </div>
+          </div>
+            <!-- Colonna per la mappa -->
+            <div class="row ">
+              <div class="col-md-1"></div>
+              <div class="col-12 col-md-8" id="flourish-container" >
+                <div class="flourish-embed flourish-hierarchy" data-src="visualisation/22712366"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/22712366/thumbnail"  alt="hierarchy visualization" /></noscript></div>
+              </div>
+              <div class="col-md-1"></div>
+              <div class="col-12 col-md-2 ">
+                <p class="intro-specie" >
+                 Il grafico dendrogramma mostra tutte le specie viventi osservate nell’oasi classificandole in modo gerarchico: classi, famiglie e nomi scientifici. </br></br>Esploralo filtrando la visualizzazione per classi di specie e scopri le immagini delle osservazioni raccolte nell'oasi.<br/><br/> 
+                 I dati utilizzati provengono dalla piattaforma iNaturalist.<br/><br/> 
+                </p>
+             </div>
+              
+            </div>
+
+        </div><!-- chiusura div 10 colonne pagina-->
+    
+      </div><!-- chiusura raw principale-->
+</div><!-- chiusura container fluid-->
+
+</body>
+
+<script type="text/javascript" src="js/script_lycaena.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wetlands site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  
+    
+  <div class="col-2 padding  header-wrapper">
+    <p class="m-0 " id="titoloprogetto">
+      <a href="index.html" style="all: unset; cursor: pointer;">Wetlands Atlas</a>
+    </p>
+  </div>
+
+
+<div class="container-fluid">
+   
+    <div class="row">
+      
+      
+        <!-- Lista di oasi per selezione -->
+        <div class="col-md-2" id="sidebar-oasi">
+          <div class="spazioheader"></div>
+          
+          <div class="row lista-oasi padding">
+              
+            <!-- CAVE DI NOALE-->
+            <div class="altezzaoasi padding" >
+              <a href="noale_mappa.html" onclick="event.preventDefault(); changeOasi('gaggionord')" class="city-link" data-oasi="noale">
+                <div class="city-img-wrapper  padding">
+                  <img src="img/noalecolor.png"  class="img-fluid">
+                  <p class="oasi-click">Cave di Noale</p>
+                </div> 
+              </a>
+            </div>
+
+            <!-- Oasi Lycaena -->
+            <div class="altezzaoasi padding">
+              <a href="lycaena_mappa.html" onclick="changeOasi('roma')" class="city-link" data-oasi="lycaena">
+                <div class="city-img-wrapper ">
+                  <img src="img/salzanobw.png" class="img-fluid">
+                  <p class="oasi-no-click ">Oasi Lycaena</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Cave di Gaggio Nord -->
+            <div class="altezzaoasi padding">
+              <a href="gaggio_mappa.html" onclick="changeOasi('napoli')" class="city-link" data-oasi="gaggio">
+                <div class="city-img-wrapper">
+                  <img src="img/gaggiobw.png" class="img-fluid">
+                  <p class="oasi-no-click ">Cave di Gaggio Nord</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Palude di Onara -->
+            <div class="altezzaoasi padding">
+              <a href="onara_mappa.html" onclick=" changeOasi('torino')" class="city-link" data-oasi="onara">
+                <div class="city-img-wrapper">
+                  <img src="img/onarabw.png"  class="img-fluid">
+                  <p class="oasi-no-click ">Palude di Onara</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10 main-content-scrollable">
+          <div class="row">
+            <div class="col-12 col-md-8 titolo-synth">
+              <p>CAVE DI NOALE</p>
+            </div>
+            <div class="col-12 col-md-4  d-flex menu-links">
+              <div class="d-flex gap-4">
+                <a href="noale_mappa.html" class="menu-item active"><span class="menu-underline"></span>Esplora la mappa</a>
+                <a href="noale_specie.html" class="menu-item"><span class="menu-underline"></span>Esplora le specie</a>
+                <a href="noale_visita.html" class="menu-item"><span class="menu-underline"></span>Visita l'oasi</a>
+              </div>
+            </div>
+          </div>
+            <!-- Colonna per la mappa -->
+            <div class="col-10 div-pagina-mappa">
+              
+              
+              <div class="col-10" id="map-container" >
+                <iframe src="https://studio.foursquare.com/map/public/9b6f3c13-731f-4aa1-b4b2-0ebce2712634/embed" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <div class="col-2 ">
+                 <p class="testo-intro">
+                  La mappa mostra l’Oasi Cave di Noale.<br/><br/> 
+                  Ogni osservazione di specie è identificata da cerchi colorati. <br/><br/> 
+                  I dati provengono dalla piattaforma iNaturlist dove gli utenti negli anni condividono sempre nuove osservazioni.<br/><br/> 
+                  Ogni colore indica una classe di specie diversa.<br/><br/> 
+                 </p>
+                  <div class="legenda">
+                    
+                    <ul>
+                    
+                      <li  class="listalegenda" id="aves">Aves</li>
+                      <li  class="listalegenda" id="insecta">Insecta</li>
+                      <li  class="listalegenda" id="reptilia">Reptilia</li>
+                      <li  class="listalegenda" id="mammalia">Mammalia</li>
+                      <li  class="listalegenda" id="magnolia">Magnoliopsida, <br/>Polypodiopsida</li>
+                      <li  class="listalegenda" id="funghi">Agaricomycetes</li>
+                      <li  class="listalegenda" id="lumaca">Gastropoda</li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+
+        </div><!-- chiusura div 10 colonne pagina-->
+    
+      </div><!-- chiusura raw principale-->
+</div><!-- chiusura container fluid-->
+
+</body>
+
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+</html>

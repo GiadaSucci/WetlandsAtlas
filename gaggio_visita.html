@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wetlands site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  
+    
+  <div class="col-2 padding  header-wrapper">
+    <p class="m-0 " id="titoloprogetto">Wetlands Atlas</p>
+  </div>
+
+
+<div class="container-fluid">
+   
+    <div class="row">
+      
+      
+        <!-- Lista di oasi per selezione -->
+        <div class="col-md-2" id="sidebar-oasi">
+          <div class="spazioheader"></div>
+          
+          <div class="row lista-oasi padding">
+              
+             <!-- CAVE DI NOALE-->
+             <div class="altezzaoasi padding" >
+              <a href="noale_visita.html" onclick=" changeOasi('gaggionord')" class="city-link" data-oasi="noale">
+                <div class="city-img-wrapper  padding">
+                  <img src="img/noalebw.png"  class="img-fluid">
+                  <p class="oasi-no-click">Cave di Noale</p>
+                  <div class="overlay"></div>
+                </div> 
+              </a>
+            </div>
+
+            <!-- Oasi Lycaena -->
+            <div class="altezzaoasi padding">
+              <a href="lycaena_visita.html" onclick=" changeOasi('roma')" class="city-link" data-oasi="lycaena">
+                <div class="city-img-wrapper ">
+                  <img src="img/salzanobw.png" class="img-fluid">
+                  <p class="oasi-no-click">Oasi Lycaena</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+
+            <!-- Cave di Gaggio Nord -->
+            <div class="altezzaoasi padding">
+              <a href="gaggio_visita.html" onclick=" changeOasi('napoli')" class="city-link active" data-oasi="gaggio">
+                <div class="city-img-wrapper">
+                  <img src="img/gaggiocolor.png" class="img-fluid">
+                  <p class="oasi-click ">Cave di Gaggio Nord</p>
+                 
+                </div>
+              </a>
+            </div>
+
+            <!-- Palude di Onara -->
+            <div class="altezzaoasi padding">
+              <a href="onara_visita.html" onclick=" changeOasi('torino')" class="city-link" data-oasi="onara">
+                <div class="city-img-wrapper">
+                  <img src="img/onarabw.png"  class="img-fluid">
+                  <p class="oasi-no-click ">Palude di Onara</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10 main-content-scrollable">
+          <div class="row">
+            <div class="col-12 col-md-8 titolo-synth">
+              <p>CAVE DI GAGGIO NORD</p>
+            </div>
+            <div class="col-12 col-md-4  d-flex menu-links">
+              <div class="d-flex gap-4">
+                <a href="gaggio_mappa.html" class="menu-item "><span class="menu-underline"></span>Esplora la mappa</a>
+                <a href="gaggio_specie.html" class="menu-item"><span class="menu-underline"></span>Esplora le specie</a>
+                <a href="gaggio_visita.html" class="menu-item active"><span class="menu-underline"></span>Visita l'oasi</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGA PER I TESTI -->
+            <div class="row">
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita1" >
+                  <p>L'Oasi Cave di Gaggio Nord è un'area naturalistica identificata  
+                    come Sito di Importanza Comunitaria , nel comune di Marcon,
+                    si tratta di una riserva naturale parte della Rete Natura 2000.
+                  </br></br>
+                    Queste cave di argilla senili hanno avuto origine da escavazioni di argilla per la fabbricazione di laterizi fin dal 1905. Le attività di scavo sono cessate attorno alla fine degli anni ’70. 
+                    Qui è intervenuto il Consorzio Acque Risorgive per dave vita a una nuova oasi in cui scorrono le acque del fiume Zero.
+                  </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita2" >
+                  <p><b>Orari di apertura oasi</b></br></br>
+                    L'Oasi può essere visitata tutto l'anno:</br></br>
+                    <u>Periodo autunno-inverno:</u> </br>
+                    Domenica e festivi dalle ore 8:00 alle ore 17:00</br></br>
+                    <u>Periodo primavera-estate:</u></br> 
+                    Domenica e festivi dalle ore 8:00 alle ore 18:00
+ 
+                  </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita3" >
+                  <p><b>Accesso all'oasi</b></br></br>
+                    Per arrivare all’oasi si prende l’uscita Marcon lungo l'autostrada 
+                    A4 Venezia-Trieste. Dal centro di Marcon, presso l'incrocio per San Liberale, 
+                    si prosegue  diritto seguendo le indicazioni per l'ingresso all’Oasi, 
+                     lungo Via Matteotti 26.
+
+
+                  </p>
+                </div>
+            </div> 
+
+            <!-- RIGA per photo gallery oasi -->
+            <div class="row spazio-gallery">
+              <div class="photo-gallery" id="photo-gallery" style="padding-left: 0px;padding-right: 0px;">
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/gaggio1.JPG" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>All'interno delle Cave a breve distanza dall'argine del fiume Zero, il Consorzio ha realizzato alcuni imboschimenti che hanno coperto una superficie di 5 ettari.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/gaggio2.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>L'erba vescica delle risaie (Utricularia australis) è una pianta ascquatica carnivor che si può osservare in alcuni degli stagni dell'oasi. I suoi fiori gialli emergono dalla superficie dell'acqua per poter essere impollinati, mentre i fusti restano sommersi. Le foglie sott'acqua portano delle vescichette che aiutano il galleggiamento della pianta ma fungono anche da trappola per piccoli animali acquatici.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/gaggio3.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>Il Marangone minore (Microcarbo pygmeus) è il più piccolo tra i cormorani europei,
+                        l’apertura alare non supera i 90 cm. Nidifica in acque dolci ferme o a lento scorrimento, dove frequenta aree con vegetazione densa, all’interno di zone umide, canneti. 
+                        Attualmente è considerato un uccelo nidificante, migratore e svernante regolare. La colonizzazione da parte del Marangone minore nel nostro Paese è un fenomeno piuttosto recente (circa dagli anni '80).</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/gaggio4.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>Gli impianti arborei del Consorzio sono terminati con la messa a dimora di 4.900 piante. Accanto all'acqua è stato posizionato in prevalenza il Pioppo Bianco e diverse specie di salice. mentre nelle zone retrostanti le specie arboree più utilizzate sono state l'Olmo campestre, il Frassino ossifillo, la Farnia.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/gaggio5.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>L'impianto arboreo è stato realizzato con piantine forestali su film plastico pacciamante che ha funzione di trttenere l'umidità e limitare la concorrenza con altre specie. Le piante sono state messe a dimora per file ondulate. Dopo 3 anni, una volta assentato l'impianto, sono stati rimossi i teli pacciamanti.</span>  
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            <!-- RIGA PER ANCORA SCROLL SCOPRI PERCORSO -->
+            <div class="row">
+              <div class="col-md-12 btn-centrato">
+                <button class="scroll-btn" id="scrollButton">
+                  <span>SCOPRI PERCORSO</span>
+                  <svg class="arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+             <!-- RIGA PER TESTO E VIDEO -->
+             <div class="row video-container" id="target-section">
+              <div class="col-12 col-md-4">
+                <p class="testo-video">
+                  Recati alle Cave di Gaggio Nord, sul  posto riceverai
+                  una mappa guida al riconoscimento delle specie che abitano questo ecosistema.
+                </br> 
+                </p>
+               
+              </div>
+              <div class="col-12 col-md-4">
+                <p class="testo-video">Clicca qui a fianco per calcolare il tuo percorso e conoscere la posizione dell'oasi. </br></p>
+              </div>
+              <div class="col-12 col-md-4 align-btn-google">
+                <a class="google-maps-btn" href="https://maps.app.goo.gl/NUoFLJ9PBREpEXmV7" >
+                  GOOGLE MAPS
+                </a>
+                </div>
+              
+              <div class="col-12 col-md-12">
+                <div>
+                  <iframe class="video" src="https://www.youtube.com/embed/iuJm1oRyyds?si=zjFradHgxgd3ywS6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+             </div>
+            
+
+           
+              
+          
+        
+
+        </div><!-- chiusura div 10 colonne pagina-->
+    
+    </div><!-- chiusura raw principale-->
+</div><!-- chiusura container fluid-->
+
+</body>
+
+<script type="text/javascript" src="js/script_gaggio.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dendrogramm.js"></script>
+</html>

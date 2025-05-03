@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wetlands site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  
+    
+  <div class="col-2 padding  header-wrapper">
+    <p class="m-0 " id="titoloprogetto">Wetlands Atlas</p>
+  </div>
+
+
+<div class="container-fluid">
+   
+    <div class="row">
+      
+      
+        <!-- Lista di oasi per selezione -->
+        <div class="col-md-2" id="sidebar-oasi">
+          <div class="spazioheader"></div>
+          
+          <div class="row lista-oasi padding">
+              
+             <!-- CAVE DI NOALE-->
+             <div class="altezzaoasi padding" >
+              <a href="noale_visita.html" onclick=" changeOasi('gaggionord')" class="city-link" data-oasi="noale">
+                <div class="city-img-wrapper  padding">
+                  <img src="img/noalebw.png"  class="img-fluid">
+                  <p class="oasi-no-click">Cave di Noale</p>
+                  <div class="overlay"></div>
+                </div> 
+              </a>
+            </div>
+
+            <!-- Oasi Lycaena -->
+            <div class="altezzaoasi padding">
+              <a href="lycaena_visita.html" onclick=" changeOasi('roma')" class="city-link" data-oasi="lycaena">
+                <div class="city-img-wrapper ">
+                  <img src="img/salzanobw.png" class="img-fluid">
+                  <p class="oasi-no-click">Oasi Lycaena</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+
+            <!-- Cave di Gaggio Nord -->
+            <div class="altezzaoasi padding">
+              <a href="gaggio_visita.html" onclick=" changeOasi('napoli')" class="city-link" data-oasi="gaggio">
+                <div class="city-img-wrapper">
+                  <img src="img/gaggiobw.png" class="img-fluid">
+                  <p class="oasi-no-click ">Cave di Gaggio Nord</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Palude di Onara -->
+            <div class="altezzaoasi padding">
+              <a href="onara_visita.html" onclick="event.preventDefault(); changeOasi('torino')" class="city-link active" data-oasi="onara">
+                <div class="city-img-wrapper">
+                  <img src="img/onaracolor.png"  class="img-fluid">
+                  <p class="oasi-click ">Palude di Onara</p>
+                 
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10 main-content-scrollable">
+          <div class="row">
+            <div class="col-12 col-md-8 titolo-synth">
+              <p>PALUDE DI ONARA</p>
+            </div>
+            <div class="col-12 col-md-4  d-flex menu-links">
+              <div class="d-flex gap-4">
+                <a href="onara_mappa.html" class="menu-item "><span class="menu-underline"></span>Esplora la mappa</a>
+                <a href="onara_specie.html" class="menu-item"><span class="menu-underline"></span>Esplora le specie</a>
+                <a href="onara_visita.html" class="menu-item active"><span class="menu-underline"></span>Visita l'oasi</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGA PER I TESTI -->
+            <div class="row">
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita1" >
+                  <p>La Palude di Onara, nel Comune di Tombolo (PD), è un'importante area naturale tutelata come Sito di Importanza Comunitaria (SIC) e Zona di Protezione Speciale (ZPS). 
+                    Si distingue per la sua biodiversità botanica, ospitando specie erbacee tipiche di ambienti più freddi.
+                    La palude è alimentata da una falda collegata al Fiume Brenta ed è attraversata dal Fiume Tergola.
+                     Oggi è tutelata e valorizzata dal Parco Palude di Onara, che ne cura la gestione ambientale e didattica. 
+                    
+                  </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita2" >
+                  <p><b>Orari di apertura oasi</b></br></br>
+                    Per sapere quando visitare l’oasi contattare il Comitato del Parco Palude di Onara. 
+                  </br></br>
+                    Sito: www.parcopaludeonara.it 
+                    E-mail: info@parcopaludeonara.it
+                  </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita3" >
+                  <p><b>Accesso all'oasi</b></br></br>
+                    Nella stagione di apertura, il Parco Palude 
+                    di Onara è sempre accessibile in via pedonale da via Asilo 10, Onara (PD).
+
+
+                  </p>
+                </div>
+            </div> 
+
+            <!-- RIGA per photo gallery oasi -->
+            <div class="row spazio-gallery">
+              <div class="photo-gallery" id="photo-gallery" style="padding-left: 0px;padding-right: 0px;">
+                
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/onara1.webp" alt="parco palude">
+                    <div class="curiosita-testo">
+                      <span>La  palude si espetnde per 148 ettari e il parco comprende passerelle e percorsi guidati con segnaletica per aiutare i visitatori a godere degli spazi acquatici più suggestivi e salvaguardare il territorio naturale.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/onara2.avif" alt="parco palude">
+                    <div class="curiosita-testo">
+                      <span>Questa zona umida di Onara è l'unica ancora esistente di una serie di ampie zone torbose che un tempo occupavano la parte settentrionale della provincia di Padova. Le aree naturali di espansione dei corsi d'acqua sono andate quasi completamente perdute, a favore di attività produttive, anche l'aera protetta è in buona parte occupata da coltivazioni agricole.</span>
+                    </div>
+                  </div>
+                </div><div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/onara3.jpg" alt="parco palude">
+                    <div class="curiosita-testo">
+                      <span>All'interno della palude sono presenti diversi ambienti, sia con acque stagnanti che con acque correnti, e diversi tipi di vegetazione arborea, tra cui spiccano le alte formazioni di alberi Ontano nero (Alnus glutinosa).</span>
+                    </div>
+                  </div>
+                </div><div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/onara4.jpeg" alt="raganella italiana">
+                    <div class="curiosita-testo">
+                      <span>La raganella italiana (Hyla intermedia) vive solo in Italia e aree ristrette di Slovenia e Svizzera. Preferisce ambienti ricchi di vegetazione acquatica con acqua di buona qualità come quella di Palude. Queste specie hanno una grande facilità di spostamento (anche 4 km in 3 giorni) e una buona abilità nel colonizzare nuovi siti. I mascchi di Raganella cantano da aprile ad autunno, sia nel periodo riproduttivo che con finalità territoriali. </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/onara5.jpg" alt="orchidee">
+                    <div class="curiosita-testo">
+                      <span>Di importante rilevanza botanica è la presenza in Palude di diverse specie di orchidee rare (l'Elleborine, Epipactis palustris, l’Orchidea di palude Anacamptis palustris, la Listera maggiore Listera ovata, la Viticcini estivi Spiranthes aestivalis).</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              
+            </div>
+            <!-- RIGA PER ANCORA SCROLL SCOPRI PERCORSO -->
+            <div class="row">
+              <div class="col-md-12 btn-centrato">
+                <button class="scroll-btn" id="scrollButton">
+                  <span>SCOPRI PERCORSO</span>
+                  <svg class="arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+             <!-- RIGA PER TESTO E VIDEO -->
+             <div class="row video-container" id="target-section">
+              <div class="col-12 col-md-4">
+                <p class="testo-video">
+                  Recati alla Palude di Onara, sul  posto riceverai
+                  una mappa guida al riconoscimento delle specie che abitano questo ecosistema.
+                </br> 
+                </p>
+               
+              </div>
+              <div class="col-12 col-md-4">
+                <p class="testo-video">Clicca qui a fianco per calcolare il tuo percorso e conoscere la posizione dell'oasi. </br></p>
+              </div>
+              <div class="col-12 col-md-4 align-btn-google">
+                <a class="google-maps-btn" href="https://maps.app.goo.gl/YvVMwySXY3dYPdTA7" >
+                  GOOGLE MAPS
+                </a>
+                </div>
+              
+              <div class="col-12 col-md-12">
+                <div>
+                  <iframe class="video" src="https://www.youtube.com/embed/vAf9eMmGI_U?si=L6uz77oT3_sxngmO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+             </div>
+            
+
+           
+              
+          
+        
+
+        </div><!-- chiusura div 10 colonne pagina-->
+    
+    </div><!-- chiusura raw principale-->
+</div><!-- chiusura container fluid-->
+
+</body>
+
+<script type="text/javascript" src="js/script_gaggio.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dendrogramm.js"></script>
+</html>

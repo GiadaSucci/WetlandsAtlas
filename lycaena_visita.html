@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wetlands site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  
+    
+  <div class="col-2 padding  header-wrapper">
+    <p class="m-0 " id="titoloprogetto">Wetlands Atlas</p>
+  </div>
+
+
+<div class="container-fluid">
+   
+    <div class="row">
+      
+      
+        <!-- Lista di oasi per selezione -->
+        <div class="col-md-2" id="sidebar-oasi">
+          <div class="spazioheader"></div>
+          
+          <div class="row lista-oasi padding">
+              
+            <!-- CAVE DI NOALE-->
+            <div class="altezzaoasi padding" >
+              <a href="noale_visita.html" onclick="changeOasi('gaggionord')" class="city-link" data-oasi="noale">
+                <div class="city-img-wrapper  padding">
+                  <img src="img/noalecolor.png"  class="img-fluid">
+                  <p class="oasi-no-click">Cave di Noale</p>
+                  <div class="overlay"></div>
+                </div> 
+              </a>
+            </div>
+
+            <!-- Oasi Lycaena -->
+            <div class="altezzaoasi padding">
+              <a href="lycaena_visita.html" onclick="changeOasi('roma')" class="city-link" data-oasi="lycaena">
+                <div class="city-img-wrapper ">
+                  <img src="img/salzanocolor.png" class="img-fluid">
+                  <p class="oasi-click">Oasi Lycaena</p>
+                  
+                </div>
+              </a>
+            </div>
+
+
+            <!-- Cave di Gaggio Nord -->
+            <div class="altezzaoasi padding">
+              <a href="gaggio_visita.html" onclick=" changeOasi('napoli')" class="city-link" data-oasi="gaggio">
+                <div class="city-img-wrapper">
+                  <img src="img/gaggiobw.png" class="img-fluid">
+                  <p class="oasi-no-click ">Cave di Gaggio Nord</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Palude di Onara -->
+            <div class="altezzaoasi padding">
+              <a href="onara_visita.html" onclick=" changeOasi('torino')" class="city-link" data-oasi="onara">
+                <div class="city-img-wrapper">
+                  <img src="img/onarabw.png"  class="img-fluid">
+                  <p class="oasi-no-click ">Palude di Onara</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10 main-content-scrollable">
+          <div class="row">
+            <div class="col-12 col-md-8 titolo-synth">
+              <p>OASI LYCAENA</p>
+            </div>
+            <div class="col-12 col-md-4  d-flex menu-links">
+              <div class="d-flex gap-4">
+                <a href="lycaena_mappa.html" class="menu-item "><span class="menu-underline"></span>Esplora la mappa</a>
+                <a href="lycaena_specie.html" class="menu-item"><span class="menu-underline"></span>Esplora le specie</a>
+                <a href="lycaena_visita.html" class="menu-item active"><span class="menu-underline"></span>Visita l'oasi</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGA PER I TESTI -->
+            <div class="row">
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita1" >
+                  <p>
+                    Le Cave senili di Villetta di Salzano 
+                    sono comprese tra il fiume Marzenego e il Rio Roviego, estendendosi per quasi 65 ettari 
+                    e sono un’area protetta, identificata come Sito di Importanza Comunitaria e Zona di Protezione Speciale.
+                    L'oasi è chiamata Lycaena per la presenza caratteristica dell'omonima farfalla, la Licena delle Paludi. Fino alla metà degli anni '80 era zona adibita a scavi per l'estrazione di argilla.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita2" >
+                  <p><b>Orari di apertura oasi</b></br></br>
+                    Gli orari di apertura sono gestiti dal 
+                    NAPEA - associazione per il presidio e l’educazione ambientale.
+                  </br></br>
+                    Da contattare al numero: 3453421353</br>
+                    oppure per mail: naepaoasi@gmail.com  </br>
+                  </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita3" >
+                  <p><b>Accesso all'oasi</b></br></br>
+                    L’ingresso all’Oasi Lycaena è in Via Leonardo da Vinci a Salzano, 
+                    poco prima dell’incrocio con Via Villetta.
+
+
+                  </p>
+                </div>
+            </div> 
+
+            <!-- RIGA per photo gallery oasi -->
+            <div class="row spazio-gallery">
+              <div class="photo-gallery" id="photo-gallery" style="padding-left: 0px;padding-right: 0px;">
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/lycaena1.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>Nelle ex cave defluiscono oggi acque provenienti dal fiume marzenego e che impiegao quasi 6 giorni per attraversare l'area umida, prma di immettersi nel Rio Roviego. In questo modo si possono sfruttare i processi naturali di fitodepurazione delle acque e si riducono gli eccessi di azoto e fosforo che potrebbero inquinare la laguna di Venezia se in grandi quantità.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/lycaena2.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>Il lento transito delle acque avviene per graità, senza ausilio di pompe, grazie al gradiente altimetrico tra le quote dei due corsi d'acqua (Marzenego e Roviego).</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/lycaena3.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>L'introduzione d'acqua e gli scavi eseguiti a diverse profondità hanno portato l'area a diventare una vasta zona umida, con una graduale riduzione delle superfici boscate e numerosi specchi d'acqua, con incremento di specie palustri e biodiversità complessiva.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/lycaena4.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>La Licena delle paludi (Lycaena dispar) è una farfalla diurna simbolo dell'oasi. Si tratta di una specie minacciata in tutta europa dalla progressiva scomparsa delle zone umide. L'apertura alare non supera i 4 cm e la femmina è più grande del maschio. I sessi sono differenti nell'aspetto tanto da sembrare due specie divere (da qui dispar). Il maschio è arancione con le ali dai sottili bordi neri mentre la femmina ha colori meno vivaci e due file di macchie sui bordi delle ali.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/lycaena5.jpeg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>Il progetto di fitodepurazione della zona non ha interessato l'area più ad est dell'oasi, che si è voluto lasciare indisturbata in virtù della presenza delle uniche zone umide rimaste dopo il progressivo inbonimento dei bacini.</span>  
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+            </div>
+            <!-- RIGA PER ANCORA SCROLL SCOPRI PERCORSO -->
+            <div class="row">
+              <div class="col-md-12 btn-centrato">
+                <button class="scroll-btn" id="scrollButton">
+                  <span>SCOPRI PERCORSO</span>
+                  <svg class="arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+             <!-- RIGA PER TESTO E VIDEO -->
+             <div class="row video-container" id="target-section">
+              <div class="col-12 col-md-4">
+                <p class="testo-video">
+                  Recati all'oasi Lycaena, sul posto riceverai
+                  una mappa guida al riconoscimento delle specie che abitano questo ecosistema.
+                </br> 
+                </p>
+               
+              </div>
+              <div class="col-12 col-md-4">
+                <p class="testo-video">Clicca qui a fianco per calcolare il tuo percorso e conoscere la posizione dell'oasi. </br></p>
+              </div>
+              <div class="col-12 col-md-4 align-btn-google">
+                <a class="google-maps-btn" href="https://maps.app.goo.gl/pn8ijq7mU6ecZkR47" >
+                  GOOGLE MAPS
+                </a>
+                </div>
+              
+              <div class="col-12 col-md-12">
+                <div>
+                  <iframe class="video" src="https://www.youtube.com/embed/UvTYZALAiiA?si=qDb_OZl6oy-mJnDl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+             </div>
+            
+
+           
+              
+          
+        
+
+        </div><!-- chiusura div 10 colonne pagina-->
+    
+    </div><!-- chiusura raw principale-->
+</div><!-- chiusura container fluid-->
+
+</body>
+
+<script type="text/javascript" src="js/script_lycaena.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dendrogramm.js"></script>
+</html>

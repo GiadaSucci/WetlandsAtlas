@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wetlands Atlas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+ 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Slideshow</title>
+    <style>
+
+      @font-face {
+        font-family: 'ABCSynt-RegularItalic-Trial';
+        src: url('../font/ABCSynt-RegularItalic-Trial.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+  
+      body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-image 1s ease-in-out;
+      }
+      .container-wa{
+        display: flex;
+        width: 100%;
+      }
+      
+      .landing-page-text {
+        font-family: "ABCSynt-RegularItalic-Trial", sans-serif;
+        font-size: 14px;
+        font-weight: 100;
+        color:whitesmoke;
+        width:400px;
+        height: 350px;
+        background-color: rgb(20, 20, 20, 0.9);
+        padding: 15px 20px;
+        font-size: 20px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+      }
+
+      .wa-btn {
+        font-family: 'JetBrains Mono';
+        font-weight: 500;
+        padding: 10px 20px; /* Spaziatura interna per rendere il bottone rettangolare */
+        font-size: 15px; /* Dimensione del testo */
+        text-decoration: none;
+        color: rgb(215, 215, 215); /* Colore del testo */
+        background-color: transparent; /* Sfondo trasparente */
+        border: 1px solid rgb(215, 215, 215); 
+        transition: background-color 0.3s ease; /* Transizione per l'effetto hover */
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      .wa-btn:hover {
+        border-color:#3DCF5C; /* Colore di sfondo quando si passa sopra il bottone */
+        color: #3DCF5C;
+      }
+    
+    </style>
+
+
+</head>
+<body>
+
+  <div class="col-2 padding header-wrapper">
+    <p class="m-0 " id="titoloprogetto">
+    <a href="index.html" style="all: unset; cursor: pointer;">Wetlands Atlas</a>
+    </p>
+  </div>
+
+  <div class="container-wa position-absolute">
+    <div class="row">
+      <div class="col-md-8"></div>
+      <div class="col-md-4 landing-page-text">
+        <p>Wetlands Atlas mostra le specie presenti nelle oasi 
+        e zone umide del Consorzio Acque Risorgive del Veneto e fornisce 
+        una guida per visite sul posto al fine di condividere con tutti 
+        l’importanza della biodiversità.</br></br></br></p>
+        
+          <a class="wa-btn" href="noale_mappa.html" >
+            ESPLORA LE WETLANDS
+          </a>
+          
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+<script>
+  const images = [
+    'img/wa_noale.jpg',
+    'img/wa_lycaena.jpg',
+    'img/wa_gaggio.jpg',
+    'img/wa_onara.jpg'
+  ];
+
+  let current = 0;
+
+  function changeBackground() {
+    document.body.style.backgroundImage = `url('${images[current]}')`;
+    current = (current + 1) % images.length;
+  }
+
+  // Initial background
+  changeBackground();
+  // Change every 3 seconds
+  setInterval(changeBackground, 1000);
+</script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+</html>

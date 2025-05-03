@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>wetlands site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  
+    
+  <div class="col-2 padding  header-wrapper">
+    <p class="m-0 " id="titoloprogetto">Wetlands Atlas</p>
+  </div>
+
+
+<div class="container-fluid">
+   
+    <div class="row">
+      
+      
+        <!-- Lista di oasi per selezione -->
+        <div class="col-md-2" id="sidebar-oasi">
+          <div class="spazioheader"></div>
+          
+          <div class="row lista-oasi padding">
+              
+            <!-- CAVE DI NOALE-->
+            <div class="altezzaoasi padding" >
+              <a href="noale_visita.html" onclick="event.preventDefault(); changeOasi('gaggionord')" class="city-link" data-oasi="noale">
+                <div class="city-img-wrapper  padding">
+                  <img src="img/noalecolor.png"  class="img-fluid">
+                  <p class="oasi-click">Cave di Noale</p>
+                </div> 
+              </a>
+            </div>
+
+            <!-- Oasi Lycaena -->
+            <div class="altezzaoasi padding">
+              <a href="lycaena_visita.html" onclick="changeOasi('roma')" class="city-link" data-oasi="lycaena">
+                <div class="city-img-wrapper ">
+                  <img src="img/salzanobw.png" class="img-fluid">
+                  <p class="oasi-no-click ">Oasi Lycaena</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+
+            <!-- Cave di Gaggio Nord -->
+            <div class="altezzaoasi padding">
+              <a href="gaggio_visita.html" onclick=" changeOasi('napoli')" class="city-link" data-oasi="gaggio">
+                <div class="city-img-wrapper">
+                  <img src="img/gaggiobw.png" class="img-fluid">
+                  <p class="oasi-no-click ">Cave di Gaggio Nord</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+            <!-- Palude di Onara -->
+            <div class="altezzaoasi padding">
+              <a href="onara_visita.html" onclick=" changeOasi('torino')" class="city-link active" data-oasi="onara">
+                <div class="city-img-wrapper">
+                  <img src="img/onarabw.png"  class="img-fluid">
+                  <p class="oasi-no-click ">Palude di Onara</p>
+                  <div class="overlay"></div>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-10 main-content-scrollable">
+          <div class="row">
+            <div class="col-12 col-md-8 titolo-synth">
+              <p>CAVE DI NOALE</p>
+            </div>
+            <div class="col-12 col-md-4  d-flex menu-links">
+              <div class="d-flex gap-4">
+                <a href="noale_mappa.html" class="menu-item "><span class="menu-underline"></span>Esplora la mappa</a>
+                <a href="noale_specie.html" class="menu-item"><span class="menu-underline"></span>Esplora le specie</a>
+                <a href="noale_visita.html" class="menu-item active"><span class="menu-underline"></span>Visita l'oasi</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGA PER I TESTI -->
+            <div class="row">
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita1" >
+                  <p>Le Cave di Noale sono un’area umida protetta, identificata come Sito di Importanza Comunitaria e Zona di Protezione Speciale. 
+                    Nel 2005, il Consorzio Acque Risorgive ha riqualificato 20 ettari di cava a ovest del Rio Draganziolo, con obiettivi di fitodepurazione 
+                    e miglioramento della sicurezza idraulica. 
+                    Attualmente L’oasi è gestita dal Comitato Oasi WWF Cave di Noale.
+                  </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita2" >
+                  <p><b>Orari di apertura oasi</b></br></br>
+                    <u>Da Aprile a Settembre:</u></br>
+                    Martedì e Giovedì, dalle ore 14:00 alle ore 20:00 
+                  </br>Sabato e Domenica, dalle ore 8:00 alle ore 20:00 </br></br>
+
+                    <u>Ottobre e Marzo:</u></br>
+                    Martedì e Giovedì, dalle ore 14:00 alle ore 18:00 
+                  </br>Sabato e Domenica, dalle ore 8:00 alle ore 18:00 </br></br>
+
+                    <u>Da Novembre a Febbraio:</u></br>
+                    Domenica dalle ore 9:00 alle ore 16:00
+ 
+                  </p>
+                </div>
+                <div class="col-12 col-md-4 testo-visita" id="tx-visita3" >
+                  <p><b>Accesso all'oasi</b></br></br>
+                    L’ingresso all’oasi Cave di Noale si trova in Via Ongari, 
+                    a ridosso della linea ferroviaria Venezia-Trento. 
+
+                  </p>
+                </div>
+            </div> 
+
+            <!-- RIGA per photo gallery oasi -->
+            <div class="row spazio-gallery">
+              <div class="photo-gallery" id="photo-gallery" style="padding-left: 0px;padding-right: 0px;">
+                
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/noale1.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>La vegetazione delle Cave di Noale è molto ricca e rispecchia l’elevata variabilità ecologica dell’area;l’elemento predominante è sicuramente il vasto canneto costituito dalla cannuccia di palude; gli stagni sono caratterizzati dalla presenza di grandi carici, tife e giaggiolo, che in primavera tinge le sponde di un vivo giallo. Le comunità arboree sono caratterizzate per lo più dalla presenza di specie pioniere ed igrofile, come i salici, i pioppi bianco e nero e l’ontano.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/noale2.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>L'area delle cave svolge importanti funzioni: può essere utilizzata per la fitodepurazione delle acque (il tempo di permanenza dell'acqua nell'oasi è di 15 giorni circa), come bacino d'espansione delle piene del fiume, inoltre ospita habitat ormai rari e di notevole interesse cientifico e ricreativo.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/noale3.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>I nuovi stagni e corsi d'acqua possono essere frequentati da animali del canneto come gli Aironi rossi e da quelli nelle aree di bosco come la Rana di Lataste e la Raganella.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/noale4.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>L'airone rosso (Ardea Purpurea) è un grande airone migratore con una apertura alare di 120–150 cm. In Italia è nidificante, nidifica in piccoli gruppi, generalmente composti da due o tre coppie, 
+                        a volte insieme anche ad altre specie, verso la fine di aprile e l'inizio di maggio. Costruisce grandi nidi all’interno di fitti canneti. Grazie alla presenza di uno di questi l'airone rosso è uno degli animali simbolo dlle cave di Noale. Purtroppo è una specie in sensibile declino in tutta Europa.</span>  
+                    </div>
+                  </div>
+                </div>
+                <div class="photo-item">
+                  <div class="container-curiosita">
+                    <img src="img/noale5.jpg" alt="noale 1">
+                    <div class="curiosita-testo">
+                      <span>La Testuggine palustre europea (Emys orbicularis) è una specie che abita le oai come quella di Noale ma con diffioltà, per diverse ragioni: la limitatezza e l'alterazione delle zone umide di pianura, il continuo incremento delle reti stradali e la competizione con specie esotiche come nel caso della testuggine palustre dalle orecchie rosse americana (Trachemys scripta elegans).</span>  
+                    </div>
+                  </div>
+                </div>
+            
+              </div>
+              
+            </div>
+            <!-- RIGA PER ANCORA SCROLL SCOPRI PERCORSO -->
+            <div class="row">
+              <div class="col-md-12 btn-centrato">
+                <button class="scroll-btn" id="scrollButton">
+                  <span>SCOPRI PERCORSO</span>
+                  <svg class="arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff"
+                    stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+             <!-- RIGA PER TESTO E VIDEO -->
+             <div class="row video-container" id="target-section">
+              <div class="col-12 col-md-4">
+                <p class="testo-video">
+                  Recati alle Cave di Noale, sul  posto riceverai
+                  una mappa guida al riconoscimento delle specie che abitano questo ecosistema.
+                </br> 
+                </p>
+               
+              </div>
+              <div class="col-12 col-md-4">
+                <p class="testo-video">Clicca qui a fianco per calcolare il tuo percorso e conoscere la posizione dell'oasi. </br></p>
+              </div>
+              <div class="col-12 col-md-4 align-btn-google">
+                <a class="google-maps-btn" href="https://maps.app.goo.gl/x9Hskp82FGhTHQAe6" >
+                  GOOGLE MAPS
+                </a>
+                </div>
+              
+              <div class="col-12 col-md-12">
+                <div>
+                  <iframe class="video" src="https://www.youtube.com/embed/qz6Al2sGjN0?si=TpT5XAJbtxgOagOS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+              </div>
+             </div>
+            
+
+           
+              
+          
+        
+
+        </div><!-- chiusura div 10 colonne pagina-->
+    
+    </div><!-- chiusura raw principale-->
+</div><!-- chiusura container fluid-->
+
+</body>
+
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script src="js/dendrogramm.js"></script>
+</html>
