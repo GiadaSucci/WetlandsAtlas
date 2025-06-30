@@ -1,0 +1,592 @@
+/* Font */
+@font-face {
+  font-family: 'ABCSynt-Book-Trial';
+  src: url('../font/ABCSynt-Book-Trial.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABCSynt-RegularItalic-Trial';
+  src: url('../font/ABCSynt-RegularItalic-Trial.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABCLaica-Light-Trial';
+  src: url('../font/ABCLaica-Light-Trial.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Stile base per il body e l'html */
+html, body {
+  font-family: "ABCSynt-Book-Trial", monospace;
+  background-color: rgb(20, 20, 20);
+  color: rgb(243, 234, 234);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.padding {
+  padding: 0 !important;
+}
+
+.altezzaoasi {
+  height: 20%;
+}
+
+.altezzaconsorzio {
+  height: 20%;
+}
+.header-wrapper {
+  background:  #3DCF5C;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px;
+  height: 70px;
+}
+
+#titoloprogetto {
+  font-family: 'ABCSynt-Book-Trial', Roboto, sans-serif;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.container-fluid {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(20, 20, 20);
+}
+
+.spazioheader {
+  margin-bottom: 70px;
+}
+
+.lista-oasi {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 70px);
+  padding: 0;
+}
+
+#sidebar-oasi {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.city-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.city-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease; /* Transizione per il cambio immagine */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease; /* Transizione per l'overlay */
+}
+
+/* Stile per i link */
+.city-link {
+  min-height: 0;
+  flex: 1 1 25%;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  transition: transform 0.3s ease; /* Transizione per effetto hover */
+}
+
+/* Effetto hover sulle voci */
+.city-link:hover .overlay {
+  opacity: 0; /* Nasconde l'overlay */
+}
+
+.oasi-click, .oasi-no-click {
+  font-family: "JetBrains Mono";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgb(215, 215, 215);
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: 5px 0;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transizione per il colore del testo */
+}
+
+/* Verde per le voci attive */
+.oasi-click {
+  color: rgb(92, 207, 100); /* Colore verde */
+}
+
+/* Stato di hover per modificare il colore del testo */
+.city-link:hover .oasi-no-click,
+.city-link.active .oasi-click {
+  color: #3DCF5C; /* Verde quando si passa sopra o è attivo */
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+  .city-link {
+    width: 100%; /* Immagini e voci su schermi piccoli occupano tutta la larghezza */
+  }
+
+  .city-img-wrapper {
+    height: 100%; /* Riduce l'altezza delle immagini su schermi piccoli */
+  }
+}
+
+@media (max-width: 480px) {
+  .city-link {
+    width: 100%;
+  }
+
+  .city-img-wrapper {
+    height: 100%; /* Ancora più ridotta su schermi molto piccoli */
+  }
+}
+
+.main-content-scrollable {
+  height: 100vh;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+.main-content-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content-scrollable::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.div-pagina-mappa{
+  display: flex;
+}
+
+  iframe {
+    width:100%;
+    height:100%;
+    border: none;
+  }
+  #map-container {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: calc(100vh - 115px);
+  }
+  .titolo-synth{
+    color: rgb(215, 215, 215);
+    margin-bottom: 0 !important;
+    display: flex;
+    padding-left: 15px;
+    margin-top:-20px !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    padding-right:0 !important;
+    font-family: 'ABCSynt-RegularItalic-Trial', serif;
+    font-size: 77px;
+  }
+  .titolo-synth-consorzio{
+    color: rgb(215, 215, 215);
+    margin-bottom: 0 !important;
+    display: flex;
+    padding-left: 0px;
+    margin-top:-20px !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    padding-right:0 !important;
+    font-family: 'ABCSynt-RegularItalic-Trial', serif;
+    font-size: 77px;
+  }
+  .testo-intro{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgb(215, 215, 215);
+    padding-left: 10px;
+    padding-right: 0px;
+    margin-left: 10px;
+    margin-right: -30px;
+    margin-bottom: 0;
+    margin-top: 0px; 
+  }
+  .intro-specie{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgb(215, 215, 215);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 5px;
+    
+  }
+  
+.legenda{
+    margin-bottom: 0;
+    height:auto;
+    font-family: "IBM Plex Sans";
+    margin-left: 17px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    margin-right: -25px;
+    /* bordo grigio */
+  }
+
+.listalegenda{
+  font-family: "IBM Plex Sans";
+  height: auto;
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 17px;
+ }
+
+.legenda ul {
+  list-style-type:square; /* quadratini al posto dei pallini */
+  padding-left: 20px;       /* spaziatura visiva */
+  margin: 0;                /* rimuove margini di default */
+}
+
+ #aves {
+  color: rgb(61, 144, 234);
+ }
+ #insecta {
+  color: rgb(226, 183, 47);
+ }
+ #reptilia {
+  color: rgb(61, 207, 92);
+ }
+ #mammalia {
+  color: rgb(234, 116, 32);
+ }
+ #magnolia {
+  color: rgb(120, 105, 241);
+ }
+ #funghi {
+  color: rgb(157, 99, 43);
+ }
+ #lumaca {
+  color: rgb(230, 103, 177);
+ }
+ #crostaceo {
+  color: rgb(255, 157, 155);
+ }
+ .menu-links {
+  gap: 25px; /* Spaziatura tra i link */
+  height: 100%;
+  display: flex; /* Aggiunto se non già presente nel genitore */
+  align-items: center; /* Centro verticale */
+}
+
+.menu-item {
+  font-family: "JetBrains Mono", monospace;
+  color: rgb(105, 105, 105);
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 10px; /* Spazio per la lineetta */
+}
+
+.menu-underline {
+  width: 100%; /* Lineetta larga quanto il testo */
+  height: 1px;
+  background-color: transparent;
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+.menu-item:hover .menu-underline,
+.menu-item.active .menu-underline {
+  background-color: #3DCF5C; /* Verde per hover e attivo */
+}
+
+.menu-item:hover {
+  color: #3DCF5C; /* Colore verde per hover */
+}
+
+.menu-item.active {
+  color: #3DCF5C; /* Colore verde per la voce attiva */
+}
+
+#flourish-container{
+  margin-bottom: 0px;
+  height: calc(100vh - 110px);
+}
+
+#flourish-container-consorzio{
+  margin-bottom: 0px;
+  height: calc(100vh+ 110 px);
+}
+
+.flourish-embed{
+  padding: 0px !important;
+}
+
+.testo-visita{
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: rgb(215, 215, 215);
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0;
+  margin-top: 0px; 
+  height: 320px;
+}
+
+
+
+
+/* Contenitore della galleria che si scorre orizzontalmente */
+.photo-gallery {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0 16px 0px; /* niente padding a sinistra */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.spazio-gallery{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 25px;
+}
+
+
+.photo-gallery:active {
+  cursor: grabbing;
+}
+
+/* Contenitore principale */
+.photo-item {
+  flex: 0 0 auto;
+  width: 600px; /* Impostato alla larghezza specificata */
+  height: 420px; /* Impostato all'altezza specificata */
+  position: relative;
+  overflow: hidden; /* Assicura che l'overlay non esca dai bordi */
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Nascondi la scrollbar orizzontale */
+.photo-gallery::-webkit-scrollbar {
+  height: 0px; 
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+  background: transparent; /* Barra di scorrimento invisibile */
+}
+
+/* Contenitore dell'immagine */
+.container-curiosita {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Immagine */
+.container-curiosita img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+  
+}
+
+/* Testo dell'overlay (Curiosità) */
+.curiosita-testo {
+  font-family:"JetBrains Mono", monospace ;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Colore di sfondo semitrasparente */
+  color: whitesmoke;
+  display: flex;
+  justify-content:flex-start;
+  align-items: top;
+  opacity: 0; /* Nascosto inizialmente */
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+}
+
+/* Animazione al passaggio del mouse */
+.container-curiosita:hover .curiosita-testo {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+.row {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.google-maps-btn {
+  font-family: 'JetBrains Mono';
+  padding: 10px 20px; /* Spaziatura interna per rendere il bottone rettangolare */
+  font-size: 15px; /* Dimensione del testo */
+  text-decoration: none;
+  color: rgb(215, 215, 215); /* Colore del testo */
+  background-color: transparent; /* Sfondo trasparente */
+  border: 1px solid rgb(215, 215, 215); /* Bordo nero di 2px */
+  cursor: pointer; /* Aggiunge un cursore a mano quando si passa sopra il bottone */
+  transition: background-color 0.3s ease; /* Transizione per l'effetto hover */
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.align-btn-google{
+  padding-top: 5px;
+}
+
+.google-maps-btn:hover {
+  border-color:#3DCF5C; /* Colore di sfondo quando si passa sopra il bottone */
+  color: #3DCF5C;
+}
+.video-container {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  height: 100vh;/* imposta l'altezza desiderata */
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 800px; /* riempi tutta l'altezza del contenitore */
+  border: 0;
+}
+
+.testo-video {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  color: rgb(215, 215, 215);
+}
+
+
+
+/* Stile per il bottone */
+.scroll-btn {
+  
+  font-family: 'JetBrains Mono';
+  padding:0px;
+  font-size: 15px;
+  color: rgb(215, 215, 215);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  text-transform: uppercase; /* Aggiunge il maiuscolo al testo */
+}
+
+.btn-centrato{
+  display: flex;
+  justify-content: center;
+}
+
+/* Stile per la freccia */
+.scroll-btn .arrow {
+  stroke: rgb(215, 215, 215);
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollButton:hover {
+  color: #3DCF5C; /* Cambia colore del testo quando hover */
+}
+
+/* Hover: cambia il colore della freccia e la posizione */
+.scroll-btn:hover .arrow {
+  stroke: #3DCF5C; /* Colore verde per la freccia */
+  transform: translateY(3px); /* Leggero spostamento verso il basso */
+}
+
+.osservazioni{
+  font-family: 'JetBrains Mono';
+  padding-left:10px;
+  padding-right: 0;
+  margin-top:-20px;
+  font-size: 15px;
+  color: rgb(215, 215, 215);
+}
+
+.osservazioni-consorzio{
+  font-family: 'JetBrains Mono';
+  padding-left:0px;
+  padding-right: 0;
+  margin-top:-20px;
+  font-size: 15px;
+  color: rgb(215, 215, 215);
+}
+
+#intro-specie-consorzio{
+  font-family: "IBM Plex Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgb(215, 215, 215);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 5px;
+    padding-top: 25px;
+
+}
