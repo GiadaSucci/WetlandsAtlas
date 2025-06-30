@@ -1,133 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <title>Wetlands Atlas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto&display=swap" rel="stylesheet">
-
- 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Background Slideshow</title>
-    <style>
-
-      @font-face {
-        font-family: 'ABCSynt-RegularItalic-Trial';
-        src: url('../font/ABCSynt-RegularItalic-Trial.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-      }
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-      }
   
-      body {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: background-image 1s ease-in-out;
-      }
-      .container-wa{
-        display: flex;
-        width: 100%;
-      }
+  <style>
+    @font-face {
+      font-family: 'ABCSynt-RegularItalic-Trial';
+      src: url('../font/ABCSynt-RegularItalic-Trial.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 1s ease-in-out;
+      background-color: rgb(20, 20, 20);
+      color: whitesmoke;
+    }
+
+    .container-wa {
+      display: flex;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .left-section {
+      flex: 1;
+      display: flex;
+      justify-content: left;
+      align-items: left;
       
-      .landing-page-text {
-        font-family: "ABCSynt-RegularItalic-Trial", sans-serif;
-        font-size: 14px;
-        font-weight: 100;
-        color:whitesmoke;
-        width:400px;
-        height: 350px;
-        background-color: rgb(20, 20, 20, 0.9);
-        padding: 15px 20px;
-        font-size: 20px;
-        position: fixed;
-        bottom: 10px;
-        right: 10px;
-      }
+      padding-left: 40px;
+    }
 
-      .wa-btn {
-        font-family: 'JetBrains Mono';
-        font-weight: 500;
-        padding: 10px 20px; /* Spaziatura interna per rendere il bottone rettangolare */
-        font-size: 15px; /* Dimensione del testo */
-        text-decoration: none;
-        color: rgb(215, 215, 215); /* Colore del testo */
-        background-color: transparent; /* Sfondo trasparente */
-        border: 1px solid rgb(215, 215, 215); 
-        transition: background-color 0.3s ease; /* Transizione per l'effetto hover */
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-      .wa-btn:hover {
-        border-color:#3DCF5C; /* Colore di sfondo quando si passa sopra il bottone */
-        color: #3DCF5C;
-      }
-    
-    </style>
+    .right-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(20, 20, 20, 0.9);
+    }
 
+    .landing-page-text {
+      font-family: "ABCSynt-Regular-Trial", sans-serif;
+      color: #3DCF5C;
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 25px;
+      max-width: 600px;
+      text-align: left;
+      margin-top:120px;
+    }
 
+    .wa-btn {
+      position: absolute;
+
+      align-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 300;
+      padding: 10px 20px;
+      font-size: 30px;
+      text-decoration: none;
+      color: #3DCF5C;
+      background-color: rgb(0, 0, 0, 0.5);
+      display: inline-block;
+      margin-top: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .wa-btn:hover {
+      background-color: #3DCF5C;
+      color: black;
+    }
+
+    .right-section {
+      flex: 1;
+      position: relative; /* necessario per il posizionamento assoluto del bottone */
+      background-color: rgba(20, 20, 20, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* evita scroll se il bottone esce */
+    }
+
+    .right-section img {
+      width: 100%;
+      height: 100%;
+      object-fit:cover; /* mantiene proporzioni senza stretch */
+      display: block;
+    }
+
+    .header-wrapper {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: 10;
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+
+   
+
+    .titolo-progetto{
+      position: fixed;
+      top:10px;
+      left: 20px;
+      font-family: "ABCSynt-RegularItalic-Trial", sans-serif;
+      font-size: 100px;
+      max-width: 100%;
+      color: #3DCF5C;
+    }
+    .collaborazioni{
+      position: fixed;
+      bottom:60px;
+      left:40px;
+      font-family: "ABCSynt-Regular-Trial", sans-serif;
+      font-size: 13px;
+      line-height: 17px;
+      max-width: 600px;
+      text-align: left;
+      color: rgb(148, 148, 148);
+
+    }
+
+    .logo-row {
+      position: fixed;
+      bottom: 20px;  /* distanza dal fondo del container */
+      left: 40px;    /* distanza dal lato sinistro */
+      display: flex;
+      gap: 15px;     /* spazio tra i loghi */
+      align-items: center;
+      z-index: 20;   /* sopra l’immagine */
+    }
+
+    .logo-row img {
+      height: 50px;          /* dimensione uniforme per i loghi */
+      object-fit: contain;
+    }
+
+    #logo1{
+      width: 120px;
+    }
+    #logo2{
+      width: 120px;
+    }
+
+  </style>
 </head>
 <body>
 
-  <div class="col-2 padding header-wrapper">
-    <p class="m-0 " id="titoloprogetto">
-    <a href="index.html" style="all: unset; cursor: pointer;">Wetlands Atlas</a>
-    </p>
-  </div>
+  
 
-  <div class="container-wa position-absolute">
-    <div class="row">
-      <div class="col-md-8"></div>
-      <div class="col-md-4 landing-page-text">
-        <p>Wetlands Atlas mostra le specie presenti nelle oasi 
-        e zone umide del Consorzio Acque Risorgive del Veneto e fornisce 
-        una guida per visite sul posto al fine di condividere con tutti 
-        l’importanza della biodiversità.</br></br></br></p>
+  <div class="container-wa">
+    
+    <!-- Sezione Sinistra: Testo -->
+    <div class="left-section">
+      <div >
         
-          <a class="wa-btn" href="noale_mappa.html" >
-            ESPLORA LE WETLANDS
-          </a>
+        <h1 class="titolo-progetto">
+          <a href="index.html" style="all: unset; cursor: pointer;">Wetlands Atlas</a>
+        </h1>
+  
+        <p class="landing-page-text">
+          Wetlands Atlas mostra le specie presenti nelle oasi e zone umide del Consorzio Acque Risorgive del Veneto e fornisce una guida <br>per visite sul posto al fine di condividere con tutti l’importanza <br>della biodiversità.
+        </p>
+  
+        
+  
+        <p class="collaborazioni">
+          Progetto realizzato all’interno del laboratorio di Information Design del Corso di laurea Magistrale in Interaction & Experience Design dell'Università della Repubblica di San Marino. Docenti: Giorgio Uboldi, Marco Luitprandi. In collaborazione con l'Osservatorio Citizen Science, ISPRA Network Nazionale Biodiversità e il Consorzio di Bonifica Acque Risorgive.
+        </p>
+
+        <div class="logo-row">
+          <img src="img/unirsm.png" alt="Logo 4">
+          <img id="logo1" src="img/logo acque risorgive.png" alt="Logo 1">
+          <img id="logo2" src="img/Logo_OCS_big.png" alt="Logo 2">
+          <img src="img/01-LOGO_NNB-color.png" alt="Logo 3">
           
+        </div>
+         
       </div>
     </div>
+  
+    <!-- Sezione Destra: Immagine -->
+    <div class="right-section">
+      <a class="wa-btn" href="noale_mappa.html">ESPLORA LE WETLANDS</a>
+      <img src="img/wetlands.png" >
+    </div>
+  
+  </div>
+
+  
   </div>
   
+
 </body>
-
-<script>
-  const images = [
-    'img/wa_noale.jpg',
-    'img/wa_lycaena.jpg',
-    'img/wa_gaggio.jpg',
-    'img/wa_onara.jpg'
-  ];
-
-  let current = 0;
-
-  function changeBackground() {
-    document.body.style.backgroundImage = `url('${images[current]}')`;
-    current = (current + 1) % images.length;
-  }
-
-  // Initial background
-  changeBackground();
-  // Change every 3 seconds
-  setInterval(changeBackground, 1000);
-</script>
-<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 </html>
