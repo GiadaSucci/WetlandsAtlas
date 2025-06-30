@@ -35,11 +35,14 @@ html, body {
 }
 
 .altezzaoasi {
-  height: 25%;
+  height: 20%;
 }
 
+.altezzaconsorzio {
+  height: 20%;
+}
 .header-wrapper {
-  background: linear-gradient(to right, #97E27A, #79a963);
+  background:  #3DCF5C;
   color: rgb(0, 0, 0);
   position: fixed;
   top: 0;
@@ -212,6 +215,18 @@ html, body {
     font-family: 'ABCSynt-RegularItalic-Trial', serif;
     font-size: 77px;
   }
+  .titolo-synth-consorzio{
+    color: rgb(215, 215, 215);
+    margin-bottom: 0 !important;
+    display: flex;
+    padding-left: 0px;
+    margin-top:-20px !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    padding-right:0 !important;
+    font-family: 'ABCSynt-RegularItalic-Trial', serif;
+    font-size: 77px;
+  }
   .testo-intro{
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 17px;
@@ -332,6 +347,11 @@ html, body {
 #flourish-container{
   margin-bottom: 0px;
   height: calc(100vh - 110px);
+}
+
+#flourish-container-consorzio{
+  margin-bottom: 0px;
+  height: calc(100vh+ 110 px);
 }
 
 .flourish-embed{
@@ -536,4 +556,37 @@ html, body {
 .scroll-btn:hover .arrow {
   stroke: #3DCF5C; /* Colore verde per la freccia */
   transform: translateY(3px); /* Leggero spostamento verso il basso */
+}
+
+.osservazioni{
+  font-family: 'JetBrains Mono';
+  padding-left:10px;
+  padding-right: 0;
+  margin-top:-20px;
+  font-size: 15px;
+  color: rgb(215, 215, 215);
+}
+
+.osservazioni-consorzio{
+  font-family: 'JetBrains Mono';
+  padding-left:0px;
+  padding-right: 0;
+  margin-top:-20px;
+  font-size: 15px;
+  color: rgb(215, 215, 215);
+}
+
+#intro-specie-consorzio{
+  font-family: "IBM Plex Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgb(215, 215, 215);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-right: 0px;
+    margin-bottom: 0;
+    margin-left: 0px;
+    margin-right: 5px;
+    padding-top: 25px;
+
 }
